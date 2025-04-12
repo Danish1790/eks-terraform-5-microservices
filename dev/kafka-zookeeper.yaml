@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: zookeeper
-  namespace: kafka
+  namespace: dev
 spec:
   serviceName: zookeeper
   replicas: 1
@@ -29,7 +29,7 @@ spec:
   kind: Service
   metadata:
     name: zookeeper
-    namespace: kafka
+    namespace: dev
   spec:
     ports:
     - port: 2181
