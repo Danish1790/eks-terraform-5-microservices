@@ -17,9 +17,9 @@ spec:
     spec:
       containers:
       - name: react-app
-        image: recipeyak/react  # Sample React image
+        image: nginx:latest  # Stable placeholder
         ports:
-        - containerPort: 3000
+        - containerPort: 80  # NGINX default
         resources:
           limits:
             cpu: "500m"
