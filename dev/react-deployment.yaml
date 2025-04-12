@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: react-app
-        image: jherr/create-react-app:latest  # Sample React image
+        image: coderenterprise/react  # Sample React image
         ports:
         - containerPort: 3000
         resources:
