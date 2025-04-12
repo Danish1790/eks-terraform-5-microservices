@@ -29,7 +29,7 @@ spec:
   resources:
     requests:
       storage: 2Gi
-  storageClassName: default
+  storageClassName: standard  # Changed from 'default' to 'standard'
 ---
 # Redis Insight deployment with name 'redisinsight'
 apiVersion: apps/v1
@@ -69,7 +69,7 @@ spec:
           terminationMessagePath: /dev/termination-log
           terminationMessagePolicy: File
       containers:
-        - name:  redisinsight #Container name (DNS_LABEL, unique)
+        - name: redisinsight #Container name (DNS_LABEL, unique)
           image: redis/redisinsight:latest #repo/image
           imagePullPolicy: IfNotPresent #Always pull image
           volumeMounts:
