@@ -1,0 +1,25 @@
+apiVersion: kibana.k8s.elastic.co/v1
+kind: Kibana
+metadata:
+  name: kibana
+  namespace: elastic-dev
+spec:
+  version: 8.17.4
+  count: 1
+  elasticsearchRef:
+    name: "elasticsearch"
+  podTemplate:
+    spec:
+      containers:
+      - name: kibana
+        resources:
+          requests:
+            cpu: "1"
+            memory: "1Gi"
+          limits:
+            cpu: "2"
+            memory: "2Gi"
+  http:
+    service:
+      spec:
+        type: LoadBalancer

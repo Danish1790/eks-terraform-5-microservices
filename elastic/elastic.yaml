@@ -1,0 +1,37 @@
+apiVersion: elasticsearch.k8s.elastic.co/v1
+kind: Elasticsearch
+metadata:
+  name: elasticsearch
+  namespace: elastic-dev
+spec:
+  version: 8.17.4
+  nodeSets:
+  - name: elasticsearch
+    count: 2 # to be increased to 3 later
+    config:
+      node.store.allow_mmap: false
+    podTemplate:
+      spec:
+        containers:
+        - name: elasticsearch
+          resources:
+            requests:
+              cpu: "1"
+              memory: "1Gi"
+            limits:
+              cpu: "2"
+              memory: "2Gi"
+    volumeClaimTemplates:
+    - metadata:
+        name: elasticsearch-data  # Must be exactly "elasticsearch-data"
+      spec:
+        accessModes:
+        - ReadWriteOnce
+        resources:
+          requests:
+            storage: 20Gi
+        storageClassName: standard
+  http:
+    service:
+      spec:
+        type: LoadBalancer
