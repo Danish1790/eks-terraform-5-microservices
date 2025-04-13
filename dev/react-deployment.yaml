@@ -15,6 +15,8 @@ spec:
       labels:
         app: react-app
     spec:
+      imagePullSecrets:
+      - name: ecr-secret
       containers:
       - name: react-app
         image: 975050228815.dkr.ecr.us-east-1.amazonaws.com/react:9

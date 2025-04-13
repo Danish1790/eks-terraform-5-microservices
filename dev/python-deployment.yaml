@@ -15,6 +15,8 @@ spec:
       labels:
         app: python-app
     spec:
+      imagePullSecrets:
+      - name: ecr-secret
       containers:
       - name: python-app
         image: 975050228815.dkr.ecr.us-east-1.amazonaws.com/python:9
