@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: react-app
-        image: 975050228815.dkr.ecr.us-east-1.amazonaws.com/react:8
+        image: 975050228815.dkr.ecr.us-east-1.amazonaws.com/react:9
         ports:
         - containerPort: 80  # NGINX default
         resources:
