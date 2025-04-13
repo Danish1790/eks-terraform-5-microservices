@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: node-app
-        image: node:18-alpine  # Sample Node.js image
+        image: 975050228815.dkr.ecr.us-east-1.amazonaws.com/node:2
         command: ["node", "-e", "require('http').createServer((req, res) => { res.writeHead(200); res.end('Hello from Node!'); }).listen(3000)"]
         ports:
         - containerPort: 3000
