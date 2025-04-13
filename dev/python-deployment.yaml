@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: python-app
-        image: python:3.9-slim  # Sample Python image
+        image: 975050228815.dkr.ecr.us-east-1.amazonaws.com/python:9
         command: ["python", "-m", "http.server", "8000"]
         ports:
         - containerPort: 8000
