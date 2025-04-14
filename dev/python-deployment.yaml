@@ -19,7 +19,7 @@ spec:
       - name: ecr-secret
       containers:
       - name: python-app
-        image: 975050228815.dkr.ecr.us-east-1.amazonaws.com/python:10
+        image: 975050228815.dkr.ecr.us-east-1.amazonaws.com/python:11
         command: ["python", "-m", "http.server", "8000"]
         ports:
         - containerPort: 8000
