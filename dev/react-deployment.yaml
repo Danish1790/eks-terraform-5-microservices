@@ -19,7 +19,11 @@ spec:
       - name: ecr-secret
       containers:
       - name: react-app
+<<<<<<< Updated upstream
         image: 975050228815.dkr.ecr.us-east-1.amazonaws.com/react:11
+=======
+        image: 975050228815.dkr.ecr.us-east-1.amazonaws.com/react:8
+>>>>>>> Stashed changes
         ports:
         - containerPort: 80  # NGINX default
         resources:

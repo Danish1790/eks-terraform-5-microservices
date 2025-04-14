@@ -72,7 +72,7 @@ spec:
           terminationMessagePolicy: File
       containers:
         - name: redisinsight #Container name (DNS_LABEL, unique)
-          image: 975050228815.dkr.ecr.us-east-1.amazonaws.com/redis:1 #repo/image
+          image: 975050228815.dkr.ecr.us-east-1.amazonaws.com/redis:1
           imagePullPolicy: IfNotPresent #Always pull image
           volumeMounts:
           - name: redisinsight #Pod volumes to mount into the container's filesystem. Cannot be updated.
