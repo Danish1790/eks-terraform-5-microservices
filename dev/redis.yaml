@@ -50,8 +50,6 @@ spec:
       labels:
         app: redisinsight #label for pod/s
     spec:
-      imagePullSecrets:
-      - name: ecr-secret
       volumes:
         - name: redisinsight
           persistentVolumeClaim:
