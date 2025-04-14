@@ -70,7 +70,7 @@ spec:
           terminationMessagePolicy: File
       containers:
         - name: redisinsight #Container name (DNS_LABEL, unique)
-          image: redis
+          image: redis/redisinsight:latest
           volumeMounts:
           - name: redisinsight #Pod volumes to mount into the container's filesystem. Cannot be updated.
             mountPath: /data
