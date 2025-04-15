@@ -19,7 +19,7 @@ spec:
       - name: ecr-secret
       containers:
       - name: react-app
-        image: 975050228815.dkr.ecr.us-east-1.amazonaws.com/react:8
+        image: nginx
         ports:
         - containerPort: 80  # NGINX default
         resources:
